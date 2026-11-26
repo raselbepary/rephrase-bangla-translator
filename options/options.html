@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Rephrase &amp; Translate — Settings</title>
+  <link rel="stylesheet" href="options.css" />
+</head>
+<body>
+  <main>
+    <h1>Rephrase &amp; Bangla Translator</h1>
+
+    <section>
+      <h2>AI provider</h2>
+      <p class="hint">
+        Used for rephrasing, reply drafting, and as a backup for translation when the free
+        Google Translate service is rate-limited or down. Any OpenAI-compatible server
+        works — OpenAI, DeepSeek, Grok, Ollama, LM Studio, llama.cpp, vLLM…
+      </p>
+
+      <div class="row">
+        <label for="provider">Provider</label>
+        <select id="provider">
+          <option value="gemini">Google Gemini</option>
+          <option value="openai">OpenAI</option>
+          <option value="deepseek">DeepSeek</option>
+          <option value="grok">Grok (xAI)</option>
+          <option value="custom">Custom / Local LLM</option>
+        </select>
+      </div>
+
+      <div class="row">
+        <label for="apiKey">API key</label>
+        <input type="password" id="apiKey" placeholder="AIza…" autocomplete="off" spellcheck="false" />
+        <a id="keyLink" href="https://aistudio.google.com/apikey" target="_blank" rel="noreferrer">get a key</a>
+      </div>
+
+      <div class="row hidden" id="urlRow">
+        <label for="baseUrl">Server URL</label>
+        <input type="text" id="baseUrl" placeholder="http://localhost:11434/v1" autocomplete="off" spellcheck="false" />
+      </div>
+      <p class="hint hidden" id="urlHint">
+        Ollama: <code>http://localhost:11434/v1</code> — start it with
+        <code>OLLAMA_ORIGINS=chrome-extension://*</code> so the extension may connect.
+        LM Studio: <code>http://localhost:1234/v1</code> (enable CORS in the server settings).
+        Any OpenAI-compatible server works.
+      </p>
+
+      <div class="row">
+        <label for="model">Model</label>
+        <input type="text" id="model" list="modelList" placeholder="leave empty for the default" autocomplete="off" spellcheck="false" />
+        <datalist id="modelList"></datalist>
+        <button id="loadModels">Load models</button>
+      </div>
+
+      <div class="row">
+        <button id="test">Test</button>
+        <button id="save" class="primary">Save</button>
+      </div>
+      <p id="status"></p>
+    </section>
+
+    <section>
+      <h2>Custom tones</h2>
+      <p class="hint">
+        Save your own tone presets — for example “Jermaine Griggs” with the prompt
+        “Rephrase in Jermaine Griggs' voice, in a helpful and polite way”.
+        They appear in the Tone menu in the popup and are also used by the
+        right-click menu and keyboard shortcuts.
+      </p>
+      <div id="toneList"></div>
+      <div class="row">
+        <button id="addTone">＋ Add tone</button>
+        <button id="saveTones" class="primary">Save tones</button>
+      </div>
+      <p id="tonesStatus"></p>
+    </section>
+  </main>
+  <script type="module" src="options.js"></script>
+</body>
+</html>

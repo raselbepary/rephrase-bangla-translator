@@ -1,0 +1,193 @@
+body {
+  margin: 0;
+  font: 14px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  color: #1f2937;
+  background: #f8fafc;
+}
+
+main {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 32px 20px;
+}
+
+h1 {
+  font-size: 20px;
+  color: #4f46e5;
+  margin: 0 0 20px;
+}
+
+h2 {
+  font-size: 15px;
+  margin: 0 0 8px;
+}
+
+section {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 18px 20px;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin: 14px 0 10px;
+}
+
+.row label {
+  width: 92px;
+  flex: none;
+  color: #475569;
+  font-size: 13px;
+}
+
+#keyLink {
+  white-space: nowrap;
+  font-size: 12.5px;
+}
+
+code {
+  background: #f1f5f9;
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-size: 12px;
+}
+
+.hidden {
+  display: none;
+}
+
+input {
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font: inherit;
+}
+
+input:focus {
+  outline: 2px solid #c7d2fe;
+  border-color: #818cf8;
+}
+
+button {
+  padding: 8px 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #eef2ff;
+  border-color: #c7d2fe;
+}
+
+button.primary {
+  background: #4f46e5;
+  border-color: #4f46e5;
+  color: #fff;
+  font-weight: 600;
+}
+
+button.primary:hover {
+  background: #4338ca;
+}
+
+.hint {
+  font-size: 12.5px;
+  color: #64748b;
+}
+
+a {
+  color: #4f46e5;
+}
+
+#status {
+  min-height: 20px;
+  font-size: 13px;
+  margin: 4px 0 0;
+}
+
+#status.ok {
+  color: #16a34a;
+}
+
+#status.error {
+  color: #dc2626;
+}
+
+/* Custom tones */
+
+#toneList {
+  display: grid;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.tone-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 10px;
+  background: #f8fafc;
+  display: grid;
+  gap: 8px;
+}
+
+.tone-card input,
+.tone-card textarea {
+  width: 100%;
+  font: inherit;
+}
+
+.tone-card input {
+  font-weight: 600;
+  background: #fff;
+}
+
+.tone-card textarea {
+  padding: 8px 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #fff;
+  resize: vertical;
+  min-height: 62px;
+}
+
+.tone-card textarea:focus {
+  outline: 2px solid #c7d2fe;
+  border-color: #818cf8;
+}
+
+.tone-card-foot {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.tone-delete {
+  font-size: 12.5px;
+  padding: 4px 10px;
+  color: #b91c1c;
+}
+
+.tone-delete:hover {
+  background: #fef2f2;
+  border-color: #fecaca;
+}
+
+#tonesStatus {
+  min-height: 20px;
+  font-size: 13px;
+  margin: 4px 0 0;
+}
+
+#tonesStatus.ok {
+  color: #16a34a;
+}
+
+#tonesStatus.error {
+  color: #dc2626;
+}

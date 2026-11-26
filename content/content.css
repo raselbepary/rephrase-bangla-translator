@@ -1,0 +1,105 @@
+.rt-panel {
+  position: fixed;
+  z-index: 2147483647;
+  min-width: 200px;
+  max-width: min(380px, 90vw);
+  background: #ffffff;
+  color: #1f2937;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(17, 24, 39, 0.18);
+  font: 14px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.rt-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px 6px;
+}
+
+.rt-title {
+  flex: 1;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #4f46e5;
+}
+
+.rt-engine {
+  font-size: 10.5px;
+  color: #94a3b8;
+  white-space: nowrap;
+}
+
+.rt-close {
+  border: 0;
+  background: none;
+  color: #94a3b8;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 2px 4px;
+  line-height: 1;
+}
+
+.rt-close:hover {
+  color: #334155;
+}
+
+.rt-body {
+  padding: 2px 12px 12px;
+  max-height: 40vh;
+  overflow: auto;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+
+.rt-bangla {
+  font-family: "Noto Sans Bengali", "Nirmala UI", "Bangla Sangam MN", "Bangla MN", "Vrinda", sans-serif;
+  line-height: 1.8;
+}
+
+.rt-error {
+  color: #dc2626;
+  font-size: 13px;
+}
+
+.rt-actions {
+  display: flex;
+  gap: 8px;
+  padding: 0 12px 12px;
+}
+
+.rt-actions button {
+  flex: 1;
+  padding: 7px 10px;
+  font-size: 12.5px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #f8fafc;
+  color: #1f2937;
+  cursor: pointer;
+}
+
+.rt-actions button:hover {
+  background: #eef2ff;
+  border-color: #c7d2fe;
+}
+
+.rt-spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin: 4px 0;
+  border: 2px solid #e0e7ff;
+  border-top-color: #4f46e5;
+  border-radius: 50%;
+  animation: rt-spin 0.8s linear infinite;
+}
+
+@keyframes rt-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

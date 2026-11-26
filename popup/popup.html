@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header>
+    <h1>Rephrase &amp; Translate</h1>
+    <button id="openOptions" title="Settings">⚙</button>
+  </header>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-tab="rephrase">Rephrase</button>
+    <button class="tab" data-tab="reply">Reply</button>
+    <button class="tab" data-tab="translate">Translate</button>
+  </nav>
+
+  <main>
+    <section id="pane-rephrase" class="pane active">
+      <div class="row">
+        <label for="tone">Tone</label>
+        <select id="tone">
+          <option value="standard">Standard</option>
+          <option value="formal">Formal</option>
+          <option value="casual">Casual</option>
+          <option value="simple">Simple</option>
+          <option value="concise">Concise</option>
+        </select>
+      </div>
+      <textarea id="rephraseInput" rows="4" placeholder="Paste or type text to rephrase…"></textarea>
+      <button id="rephraseBtn" class="primary">Rephrase</button>
+      <div id="rephraseOut" class="output hidden">
+        <div class="output-head">
+          <span id="rephraseEngine" class="engine"></span>
+          <button id="rephraseCopy" class="copy">Copy</button>
+        </div>
+        <p id="rephraseText" class="result"></p>
+      </div>
+    </section>
+
+    <section id="pane-reply" class="pane">
+      <div class="row">
+        <label for="replyTone">Tone</label>
+        <select id="replyTone">
+          <option value="standard">Standard</option>
+          <option value="formal">Formal</option>
+          <option value="casual">Casual</option>
+          <option value="simple">Simple</option>
+          <option value="concise">Concise</option>
+        </select>
+      </div>
+      <textarea id="replyInput" rows="4" placeholder="Paste the message you want to reply to…"></textarea>
+      <button id="replyBtn" class="primary">Draft reply</button>
+      <div id="replyOut" class="output hidden">
+        <div class="output-head">
+          <span id="replyEngine" class="engine"></span>
+          <button id="replyCopy" class="copy">Copy</button>
+        </div>
+        <p id="replyText" class="result"></p>
+      </div>
+    </section>
+
+    <section id="pane-translate" class="pane">
+      <div class="row dir">
+        <span id="fromLabel">English</span>
+        <button id="swapLang" title="Swap direction">⇄</button>
+        <span id="toLabel">বাংলা</span>
+      </div>
+      <textarea id="translateInput" rows="4" placeholder="Type or paste text…"></textarea>
+      <button id="translateBtn" class="primary">Translate</button>
+      <div id="translateOut" class="output hidden">
+        <div class="output-head">
+          <span id="translateEngine" class="engine"></span>
+          <button id="translateCopy" class="copy">Copy</button>
+        </div>
+        <p id="translateText" class="result"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer id="status"></footer>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
